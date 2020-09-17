@@ -12,8 +12,8 @@ public class DemoSpringIocContainerApplication {
 				new AnnotationConfigApplicationContext(DemoSpringIocContainerApplication.class);
 
 		GreetingController greetingController = context.getBean(GreetingController.class);
-		greetingController.greet();
-		greetingController.greet();
+		greetingController.getGreetingService().sayHi();
+		greetingController.getGreetingService().sayHi();
 	}
 
 }
