@@ -9,8 +9,12 @@ public class Bar {
 
     private Foo foo;
     @Autowired
-    public Bar(@Lazy Foo foo) {
+    public void setFoo(Foo foo) {
         this.foo = foo;
+    }
+
+    public Foo getFoo() {
+        return foo;
     }
 
     public void hi() {
